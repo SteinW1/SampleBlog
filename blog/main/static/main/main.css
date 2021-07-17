@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+}
+
+.navbar-item {
+}
+
+.navbar-item:hover {
+}
+
+.column-container {
+    display: flex;
+}
+
+.column {
+    padding: 0.625em;
+}
+
+.column-side {
+    flex: 1;
+}
+
+.column-middle {
+    flex: 2;
+}

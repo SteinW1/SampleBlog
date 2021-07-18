@@ -1,7 +1,7 @@
 :root {
     /*--primaryColor: #52fc03;*/
     --primaryColor: #4cb04a;
-    --secondaryColor: #323830;
+    --secondaryColor: #b04a4c;
     --black: #000000;
     --white: #ffffff;
 }
@@ -13,7 +13,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: var(--primaryColor)
+    background: var(--white)
 }
 
 a {
@@ -24,23 +24,24 @@ a {
 .navbar {
     padding: 0;
     margin: 0;
-    background: var(--white)
+    background: var(--primaryColor)
 }
 
 .navbar a {
     display: inline-block;
-    color: var(--black);
+    color: var(--white);
     padding: 10px 10px;
 }
 
 .navbar a:hover {
-    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+    /*color: var(--secondaryColor);*/
     text-decoration: none;
     transition-duration: .25s;
 }
 
 .homebanner {
-    background: var(--black)
+    background: var(--secondaryColor);
 }
 
 .column-container {

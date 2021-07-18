@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{% static 'main/main.css' %}">
         <script src="https://www.google.com/recaptcha/api.js?render={{recaptcha_site_key}}"></script>
     
         {% if title %}
@@ -13,13 +14,13 @@
         {% endif %}
     </head>
     <body>
-        <div class="homebanner">BIG BIG BANNER</div>
         <ul class="navbar">
             <a class="navbar-item" href="{% url 'home' %}">Home</a>
             <a class="navbar-item" href="#articles">Articles</a>
             <a class="navbar-item" href="#about">About</a>
             <a class="navbar-item" href="{% url 'contact-form' %}">Contact</a>
         </ul>
+        <div class="homebanner">BIG BIG BANNER</div>
         </div>
         <div class="column-container">
             <div class="column column-side">Left Column</div>

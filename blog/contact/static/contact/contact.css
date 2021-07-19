@@ -1,8 +1,10 @@
 .contact-header-container {
-    padding: 10px;
+    
+    color: var(--white);
+    font-weight: bold;
 }
 
-.contact-form-input-container {
+.contact-form-container {
     padding: 20px;
     background-color: var(--primaryColor);
     border-radius: 5px;
@@ -27,14 +29,14 @@
 
 .contact-form-textfield {
     padding: 5px;
-    border:2px solid var(--white);
+    border:3px solid var(--white);
     outline: none;
     resize: none;
     width: 100%;
 }
 
 .contact-form-textfield:focus {
-    border:2px solid var(--secondaryColor);
+    border:3px solid var(--secondaryColor);
 }
 
 .contact-form-input-label {
@@ -47,7 +49,16 @@
     padding: 10px 10px 0px 0px;
 }
 
+.contact-form-button {
+    color: var(--primaryColor);
+    font-weight: bold;
+    background-color: var(--white);
+    padding: 10px 20px;
+    border: none;
+}
+
 .contact-form-button:hover {
+    color: var(--white);
     background-color: var(--secondaryColor);
     cursor: pointer;
 }

@@ -2,6 +2,7 @@
     /*--primaryColor: #52fc03;*/
     --primaryColor: #4cb04a;
     --secondaryColor: #b04a4c;
+    --thirdColor: #ededed;
     --black: #000000;
     --white: #ffffff;
 }
@@ -54,8 +55,13 @@ a {
 
 .column-side {
     flex: 1;
+    background-color: var(--thirdColor);
 }
 
 .column-middle {
     flex: 3;
+}
+
+.content {
+    padding: 20px;
 }

@@ -20,12 +20,10 @@
             <a class="navbar-item" href="#about">About</a>
             <a class="navbar-item" href="{% url 'contact-form' %}">Contact</a>
         </ul>
-        <div class="homebanner">BIG BIG BANNER</div>
-        </div>
         <div class="column-container">
-            <div class="column column-side">Left Column</div>
-            <div class="column column-middle">Main Middle Column {% block content %}{% endblock content %}</div>
-            <div class="column column-side">Right Column</div>
+            <div class="column column-side"></div>
+            <div class="column column-middle">{% block content %}{% endblock content %}</div>
+            <div class="column column-side"></div>
         </div>
     </body>
 </html>

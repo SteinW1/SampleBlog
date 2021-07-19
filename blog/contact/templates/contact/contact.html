@@ -7,11 +7,7 @@
     <script>recaptchatoken('{{ recaptcha_site_key }}')</script>
 
     <div class="content">
-        <div class="contact-header-container">
-            <h1>Contact Me</h1>
-            <p>Send me a message by filling out the form below.</p>
-        </div>
-        
+
         {% if messages %}
             <ul class="contact-form-alert_message {{ message.tags }}">
                 {% for message in messages %}
@@ -25,6 +21,12 @@
         {% endif %}
     
         <div class="contact-form-container">
+
+            <div class="contact-header-container">
+                <h1>Contact Me</h1>
+                <p>Send me a message by filling out the form below.</p>
+            </div>
+
             <form method="post">
                 {% csrf_token %}
                 

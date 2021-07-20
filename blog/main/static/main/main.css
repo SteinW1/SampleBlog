@@ -1,5 +1,4 @@
 :root {
-    /*--primaryColor: #52fc03;*/
     --primaryColor: #4cb04a;
     --secondaryColor: #b04a4c;
     --thirdColor: #ededed;
@@ -64,4 +63,14 @@ a {
 
 .content {
     padding: 20px;
+}
+
+/* Make columns stack into rows when on mobile device */
+@media (max-width: 800px) {
+    .column-container {
+        flex-direction: column;
+    }
+    .column-side {
+        display: none;
+    }
 }

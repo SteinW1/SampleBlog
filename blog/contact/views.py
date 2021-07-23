@@ -7,7 +7,6 @@ from django.views import View
 from .forms import ContactForm
 import requests # import requests module for easyier http for google recaptcha API
 
-
 class ContactView(View):
     
     template = 'contact/contact.html'
@@ -39,7 +38,7 @@ class ContactView(View):
                 except BadHeaderError:
                     messages.error(request, f'Invalid header found.')
                     return redirect('contact-form')
-                '''
+                '''    
                 messages.success(request, f'Thank you, your message has been sent!')
                 return redirect('contact-form')
             else:
@@ -49,11 +48,6 @@ class ContactView(View):
         else:
             for error_message in self.form.errors:
                 messages.error(request, f'{self.form.errors[error_message]}')
-            
-            print("error")
-            for field in self.form:
-                print("Field Error:", field.name,  field.errors)
-            
             
         return render(request, self.template, self.context)
 

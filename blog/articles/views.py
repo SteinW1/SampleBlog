@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import ListView
-from .models import Articles
+from django.views.generic import ListView, DetailView
+from .models import Article
 
 # Create your views here.
 def articles():
@@ -13,17 +13,17 @@ def articles():
     #return render(request, 'articles/articles.html',context)
 
 class ArticleView(DetailView):
-    model = Articles
+    model = Article
 
 class ArticleListView(ListView):
-    model = Articles
-    template = '' # template not added yet
+    model = Article
     context_object_name = 'articles'
     paginate_by = 4
 
-    def get_context_data(**kwargs):
+    def get_context_data(self, **kwargs):
+        pass
         
-
-# def article post
-# def article delete
-# def article update
+#TODO:
+#   def article post
+#   def article delete
+#   def article update

@@ -3,10 +3,23 @@
     <div class="article-container">
         {{ test_text }}
         {% for article in articles %}
-            <h1>{{ article.title }}</h1>
-            <p>{{ article.author }}</p>
-            <p>{{ article.date_posted }}</p>
-            <p>{{ article.content }}</p>
+            <div class="article-header">
+                <h1>{{ article.title }}</h1>
+                <p>{{ article.author }}</p>
+                <p>{{ article.date_posted }}</p>
+            </div>
+            <div class="article-body">
+                <p>{{ article.content }}</p>
+            </div>
         {% endfor %}
+        <div class="pagination">
+            {% if page_obj.has_previous %}
+            {% endif %}
+            
+            current page number
+            
+            {% if page_obj.has_next %}
+            {% endif %}      
+        </div>
     </div>
 {% endblock content %}

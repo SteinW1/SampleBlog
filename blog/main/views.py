@@ -10,5 +10,4 @@ def home(request):
     }
     paginator = Paginator
     
-    
     return render(request, 'main/home.html', context)

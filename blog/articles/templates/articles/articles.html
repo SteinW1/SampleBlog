@@ -5,8 +5,15 @@
         {% for article in articles %}
             <div class="article-header">
                 <h1>{{ article.title }}</h1>
-                <p>{{ article.author }}</p>
-                <p>{{ article.date_posted }}</p>
+                <p>by {{ article.author }}</p>
+                
+                {% if article.created_at|date:"Y-m-d H:i:s" != article.updated_at|date:"Y-m-d H:i:s" %}
+                    <p>Posted on: {{ article.created_at|date:"M d, Y, h:i a" }}</p>
+                    <p>Updated: {{ article.updated_at|date:"M d, Y, h:i a" }}</p>
+                {% else %}
+                    <p>Posted on: {{ article.created_at|date:"M d, Y, h:i a" }}</p>
+                {% endif %}
+                
             </div>
             <div class="article-body">
                 <p>{{ article.content }}</p>

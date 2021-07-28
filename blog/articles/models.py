@@ -6,7 +6,10 @@ from main.models import TimeStampMixin
 # Create your models here.
 class Article(TimeStampMixin):
     article_id = models.AutoField(primary_key=True)
+    
     title = models.CharField(max_length=100)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
-    visible = [('True', 'False')] #this line needs fixed
+    
+    visibility_choices = (('True','Visible'),('False', 'Hidden'))
+    visible = models.CharField(max_length=10, choices=visibility_choices)
